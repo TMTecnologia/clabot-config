@@ -18,8 +18,8 @@ jobs:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.CLA_CONFIG_PERSONAL_ACCESS_TOKEN }}
         with:
           path-to-signatures: "signatures/v1.0.0/cla.json"
-          path-to-document: "https://github.com/devopness/.github/blob/main/cla.md"
-          allowlist: dependabot,devopness-automations
+          path-to-document: "https://github.com/tmtecnologia/.github/blob/main/cla.md"
+          allowlist: dependabot
           # branch should not be protected
           branch: "main"
           remote-organization-name: "TMTecnologia"
