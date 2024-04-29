@@ -17,7 +17,7 @@ jobs:
           # The below token should have repo scope and must be manually added by you in the repository's secret
           PERSONAL_ACCESS_TOKEN: ${{ secrets.CLA_CONFIG_PERSONAL_ACCESS_TOKEN }}
         with:
-          path-to-signatures: "signatures/v1.0.0/cla.json"
+          path-to-signatures: "signatures/v2.0.0/cla.json"
           path-to-document: "https://github.com/tmtecnologia/.github/blob/main/cla.md"
           allowlist: dependabot
           # branch should not be protected
@@ -25,3 +25,8 @@ jobs:
           remote-organization-name: "TMTecnologia"
           remote-repository-name: "clabot-config"
           lock-pullrequest-aftermerge: false
+          custom-notsigned-prcomment: |
+            'Thanks 💖 for your submission! We ask that $you sign our [Contributor
+            License Agreement](https://github.com/devopness/.github/blob/main/CLA.md)
+            before we can accept your contribution. You can sign the CLA by
+            adding a comment below using this text:'
