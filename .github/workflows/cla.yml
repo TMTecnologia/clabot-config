@@ -10,7 +10,7 @@ jobs:
       - name: "CLA Assistant"
         if: >
           github.event.comment.body == 'recheck' ||
-          github.event.comment.body == 'I have read the CLA Document and I hereby sign the CLA' ||
+          github.event.comment.body == 'I have read the CLA document and I hereby sign the CLA' ||
           github.event_name == 'pull_request_target'
         uses: contributor-assistant/github-action@v2.3.2
         env:
@@ -28,6 +28,7 @@ jobs:
           remote-organization-name: "TMTecnologia"
           remote-repository-name: "clabot-config"
           lock-pullrequest-aftermerge: false
+          custom-pr-sign-comment: "I have read the CLA document and I hereby sign the CLA"
           custom-notsigned-prcomment: |
             <br/>Thanks 💖 for your submission!<br/>
             We ask that $you sign our [Contributor License Agreement](https://github.com/devopness/.github/blob/main/CLA.md) before we can accept your contribution.<br/>
