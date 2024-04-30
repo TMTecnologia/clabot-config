@@ -8,7 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "CLA Assistant"
-        if: (github.event.comment.body == 'recheck' || github.event.comment.body == 'I have read the CLA Document and I hereby sign the CLA') || github.event_name == 'pull_request_target'
+        if: >
+          github.event.comment.body == 'recheck' ||
+          github.event.comment.body == 'I have read the CLA Document and I hereby sign the CLA' ||
+          github.event_name == 'pull_request_target'
         uses: contributor-assistant/github-action@v2.3.2
         env:
           # CLA Action uses this in-built GitHub token to make the API calls for interacting with GitHub.
@@ -26,6 +29,7 @@ jobs:
           remote-repository-name: "clabot-config"
           lock-pullrequest-aftermerge: false
           custom-notsigned-prcomment: |
-	    Thanks 💖 for your submission!
-	    We ask that $you sign our [Contributor License Agreement](https://github.com/devopness/.github/blob/main/CLA.md) before we can accept your contribution.
-	    You can sign the CLA by adding a comment below using this text:
+            'Thanks 💖 for your submission!<br/>We ask that $you sign our [Contributor
+            License Agreement](https://github.com/devopness/.github/blob/main/CLA.md)
+            before we can accept your contribution.<br/>You can sign the CLA by
+            adding a comment below using this text:'
