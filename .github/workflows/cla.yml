@@ -29,7 +29,6 @@ jobs:
           remote-repository-name: "clabot-config"
           lock-pullrequest-aftermerge: false
           custom-notsigned-prcomment: |
-            'Thanks 💖 for your submission!<br/>We ask that $you sign our [Contributor
-            License Agreement](https://github.com/devopness/.github/blob/main/CLA.md)
-            before we can accept your contribution.<br/>You can sign the CLA by
-            adding a comment below using this text:'
+            Thanks 💖 for your submission!<br/>
+            We ask that $you sign our [Contributor License Agreement](https://github.com/devopness/.github/blob/main/CLA.md) before we can accept your contribution.<br/>
+            You can sign the CLA by adding a comment below using this text:
